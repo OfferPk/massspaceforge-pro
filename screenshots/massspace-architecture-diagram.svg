@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 520" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#020617"/>
+      <stop offset="100%" stop-color="#0b132b"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="960" height="520" fill="url(#bgGrad)"/>
+  <rect x="20" y="20" width="920" height="480" rx="16" fill="none" stroke="#334155" stroke-width="1.5"/>
+
+  <!-- Title Header -->
+  <text x="50" y="65" fill="#ffffff" font-family="'JetBrains Mono', monospace" font-size="20" font-weight="bold">MassSpaceForge Pro (v1.0.0) Architecture</text>
+  <text x="50" y="90" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="13">ECSS-E-ST-10-02C &amp; ISO 22010 Spacecraft Mass Properties Control, CoM &amp; Inertia Pipeline</text>
+
+  <!-- Section 1: Subsystem Mass Roll-up & DML Margins -->
+  <g transform="translate(50, 120)">
+    <rect width="260" height="340" rx="12" fill="url(#cardGrad)" stroke="#38bdf8" stroke-width="1.5"/>
+    <rect x="15" y="15" width="230" height="30" rx="6" fill="rgba(56, 189, 248, 0.15)"/>
+    <text x="25" y="35" fill="#38bdf8" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="bold">1. DML MARGIN ROLL-UP</text>
+
+    <text x="20" y="70" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12">• ECSS-E-ST-10-02C Table 4-1</text>
+    <text x="20" y="92" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12">• DML 1 (Conceptual): +20.0%</text>
+    <text x="20" y="114" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12">• DML 2 (Preliminary): +15.0%</text>
+    <text x="20" y="136" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12">• DML 3 (Detailed/CDR): +10.0%</text>
+    <text x="20" y="158" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12">• DML 4 (Manufactured): +5.0%</text>
+    <text x="20" y="180" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12">• DML 5 (Measured/COTS): +2.0%</text>
+
+    <rect x="20" y="200" width="220" height="110" rx="6" fill="#0f172a" stroke="#1e293b"/>
+    <text x="30" y="224" fill="#38bdf8" font-family="'JetBrains Mono', monospace" font-size="11">Dry Mass Roll-Up:</text>
+    <text x="30" y="244" fill="#cbd5e1" font-family="'JetBrains Mono', monospace" font-size="11">Nominal: 193.1 kg</text>
+    <text x="30" y="264" fill="#34d399" font-family="'JetBrains Mono', monospace" font-size="11">Predicted: 209.6 kg (+8.5%)</text>
+    <text x="30" y="284" fill="#34d399" font-family="'JetBrains Mono', monospace" font-size="11">System Reserve: +10% (CDR)</text>
+  </g>
+
+  <!-- Section 2: 3D Center of Mass (CoM) Synthesis -->
+  <g transform="translate(350, 120)">
+    <rect width="260" height="340" rx="12" fill="url(#cardGrad)" stroke="#fbbf24" stroke-width="1.5"/>
+    <rect x="15" y="15" width="230" height="30" rx="6" fill="rgba(251, 191, 36, 0.15)"/>
+    <text x="25" y="35" fill="#fbbf24" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="bold">2. 3D CENTER OF MASS (CoM)</text>
+
+    <text x="20" y="70" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12">• Launcher Interface Plane Origin</text>
+    <text x="20" y="92" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12">• X_CoM = ∑ m_i X_i / ∑ m_i</text>
+    <text x="20" y="114" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12">• Y_CoM = ∑ m_i Y_i / ∑ m_i</text>
+    <text x="20" y="136" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12">• Z_CoM = ∑ m_i Z_i / ∑ m_i</text>
+    <text x="20" y="158" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12">• Lateral Offset: r = √(X² + Y²)</text>
+    <text x="20" y="180" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12">• Clampband Stay-in Envelope</text>
+
+    <rect x="20" y="200" width="220" height="110" rx="6" fill="#0f172a" stroke="#1e293b"/>
+    <text x="30" y="224" fill="#fbbf24" font-family="'JetBrains Mono', monospace" font-size="11">CoM Envelope Status:</text>
+    <text x="30" y="244" fill="#38bdf8" font-family="'JetBrains Mono', monospace" font-size="11">Offset: r_lat = 0.11 mm</text>
+    <text x="30" y="264" fill="#34d399" font-family="'JetBrains Mono', monospace" font-size="11">Limit: ≤ 10.0 mm (PASS)</text>
+    <text x="30" y="284" fill="#34d399" font-family="'JetBrains Mono', monospace" font-size="11">Tip-off: 0.004°/s (≤0.5°/s)</text>
+  </g>
+
+  <!-- Section 3: 3D Inertia Tensor & Launch Vehicle Margin -->
+  <g transform="translate(650, 120)">
+    <rect width="260" height="340" rx="12" fill="url(#cardGrad)" stroke="#34d399" stroke-width="1.5"/>
+    <rect x="15" y="15" width="230" height="30" rx="6" fill="rgba(52, 211, 153, 0.15)"/>
+    <text x="25" y="35" fill="#34d399" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="bold">3. INERTIA TENSOR &amp; LIFT</text>
+
+    <text x="20" y="70" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12">• Parallel Axis Theorem (Steiner)</text>
+    <text x="20" y="92" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12">• I_xx = ∑ [I_local + m(Δy²+Δz²)]</text>
+    <text x="20" y="114" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12">• Cross Products I_xy, I_xz, I_yz</text>
+    <text x="20" y="136" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12">• Principal Axis Tilt θ ≤ 0.50°</text>
+    <text x="20" y="158" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12">• Positive Definiteness det(I) &gt; 0</text>
+    <text x="20" y="180" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12">• LV Capability Margin ≥ +10%</text>
+
+    <rect x="20" y="200" width="220" height="110" rx="6" fill="#0f172a" stroke="#1e293b"/>
+    <text x="30" y="224" fill="#34d399" font-family="'JetBrains Mono', monospace" font-size="11">Launch Capability:</text>
+    <text x="30" y="244" fill="#38bdf8" font-family="'JetBrains Mono', monospace" font-size="11">LV Lift: 450 kg (Falcon 9)</text>
+    <text x="30" y="264" fill="#34d399" font-family="'JetBrains Mono', monospace" font-size="11">Wet MPM: 238.5 kg</text>
+    <text x="30" y="284" fill="#34d399" font-family="'JetBrains Mono', monospace" font-size="11">Margin: +47.0% (PASS)</text>
+  </g>
+</svg>
